@@ -53,6 +53,9 @@ return {
       options = {
         theme = my_lualine_theme,
       },
+      sections = {
+        lualine_x = { "diff", "spaces", "encoding", { "fileformat", icons_enabled = false }, "filetype" },
+      },
     })
   end,
 }
