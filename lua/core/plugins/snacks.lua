@@ -24,6 +24,8 @@ return {
       },
     },
     scope = {},
+    notifier = {},
+    lazygit = {},
   },
   keys = {
     {
@@ -60,6 +62,11 @@ return {
         Snacks.picker.git_branches()
       end,
       desc = "[S]earch [B]rances",
+      "<leader>gg",
+      function()
+        Snacks.lazygit()
+      end,
+      desc = "[S]earch [L]azyGit [C]hanges",
     },
     {
       "<leader>sr",
@@ -92,7 +99,7 @@ return {
     {
       "<leader>so",
       function()
-        Snacks.picker.files({ cwd = "~/vaults/personal" })
+        Snacks.picker.files({ cwd = "~/code/obsidian-vault/" })
       end,
       desc = "[S]earch [O]bsidian",
     },

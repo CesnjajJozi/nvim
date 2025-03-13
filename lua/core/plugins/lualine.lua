@@ -54,6 +54,9 @@ return {
         section_separators = " ",
         component_separators = "|",
       },
+      sections = {
+        lualine_x = { "diff", "spaces", "encoding", { "fileformat", icons_enabled = false }, "filetype" },
+      },
     })
   end,
 }
