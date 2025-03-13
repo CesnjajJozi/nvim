@@ -10,7 +10,7 @@ return {
     workspaces = {
       {
         name = "personal",
-        path = "~/vaults/personal",
+        path = "~/code/obsidian-vault/",
       },
     },
   },
