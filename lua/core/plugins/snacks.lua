@@ -61,6 +61,8 @@ return {
         Snacks.picker.git_branches()
       end,
       desc = "[S]earch [B]rances",
+    },
+    {
       "<leader>gg",
       function()
         Snacks.lazygit()
