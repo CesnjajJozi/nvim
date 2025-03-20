@@ -45,7 +45,7 @@ return {
     {
       "<leader>sn",
       function()
-        Snacks.picker.files({ cwd = "~/code/.config/nvim" })
+        Snacks.picker.files({ cwd = "~/.config/nvim" })
       end,
       desc = "[S]earch [F]iles",
     },
@@ -99,7 +99,7 @@ return {
     {
       "<leader>so",
       function()
-        Snacks.picker.files({ cwd = "~/code/code/obsidian-vault/" })
+        Snacks.picker.files({ cwd = "~/code/obsidian-vault/" })
       end,
       desc = "[S]earch [O]bsidian",
     },
