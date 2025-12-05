@@ -25,7 +25,7 @@ return {
       { "nvim-lua/plenary.nvim", branch = "master" },
     },
     opts = {
-      model = "claude-3.7-sonnet",
+      model = "claude-sonnet-4.5",
       agent = "copilot",
       mappings = {
         reset = {
@@ -37,8 +37,8 @@ return {
           insert = "<A-CR>", -- <C-CR> aslo works
         },
         accept_diff = {
-          normal = "ł", -- <A-l>
-          insert = "ł", -- <A-l>
+          normal = "¢", -- <A-c>
+          insert = "¢", -- <A-c>
         },
       },
     },

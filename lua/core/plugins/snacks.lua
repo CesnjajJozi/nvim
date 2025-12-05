@@ -2,7 +2,19 @@ return {
   "folke/snacks.nvim",
   ---@type snacks.Config
   opts = {
+    explorer = {
+      -- your explorer configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    },
+    indent = {},
     picker = {
+      sources = {
+        explorer = {
+          -- your explorer picker configuration comes here
+          -- or leave it empty to use the default settings
+        },
+      },
       formatters = {
         file = {
           truncate = 100,
@@ -24,8 +36,17 @@ return {
       },
     },
     scope = {},
+    notifier = {},
+    lazygit = {},
   },
   keys = {
+    {
+      "<leader>t",
+      function()
+        Snacks.explorer()
+      end,
+      desc = "File Explorer",
+    },
     {
       "<leader>sf",
       function()
@@ -62,6 +83,13 @@ return {
       desc = "[S]earch [B]rances",
     },
     {
+      "<leader>gg",
+      function()
+        Snacks.lazygit()
+      end,
+      desc = "[S]earch [L]azyGit [C]hanges",
+    },
+    {
       "<leader>sr",
       function()
         Snacks.picker.resume()
@@ -92,7 +120,7 @@ return {
     {
       "<leader>so",
       function()
-        Snacks.picker.files({ cwd = "~/vaults/personal" })
+        Snacks.picker.files({ cwd = "~/code/obsidian-vault/" })
       end,
       desc = "[S]earch [O]bsidian",
     },
@@ -200,27 +228,27 @@ return {
           if choice then
             local searches = {
               controllers = {
-                dir = "~/goHy2/core-customize/hybris/bin/custom/ggcommercewebservices/web/src/si/zenlab/v2/controller",
+                dir = "~/code/goHy2/core-customize/hybris/bin/custom/ggcommercewebservices/web/src/si/zenlab/v2/controller",
                 search = "value =.*",
               },
               facades = {
-                dir = "~/goHy2/core-customize/hybris/bin/custom/gorenje/ggfacades/src/si/zenlab/gg/facades/impl",
+                dir = "~/code/goHy2/core-customize/hybris/bin/custom/gorenje/ggfacades/src/si/zenlab/gg/facades/impl",
                 search = "public.*",
               },
               DAOs = {
-                dir = "~/goHy2/core-customize/hybris/bin/custom/gorenje/ggcore/src/si/zenlab/gg/core/daos/impl",
+                dir = "~/code/goHy2/core-customize/hybris/bin/custom/gorenje/ggcore/src/si/zenlab/gg/core/daos/impl",
                 search = "public.*",
               },
               populators = {
-                dir = "~/goHy2/core-customize/hybris/bin/custom/gorenje/ggfacades/src/si/zenlab/gg/facades/populators",
+                dir = "~/code/goHy2/core-customize/hybris/bin/custom/gorenje/ggfacades/src/si/zenlab/gg/facades/populators",
                 search = "public class.*",
               },
               services = {
-                dir = "~/goHy2/core-customize/hybris/bin/custom/gorenje/ggcore/src/si/zenlab/gg/core/service/impl",
+                dir = "~/code/goHy2/core-customize/hybris/bin/custom/gorenje/ggcore/src/si/zenlab/gg/core/service/impl",
                 search = "public.*",
               },
               XMLs = {
-                dir = "~/goHy2/core-customize/hybris/bin/custom/gorenje/ggcore/resources/ggcore-items.xml",
+                dir = "~/code/goHy2/core-customize/hybris/bin/custom/gorenje/ggcore/resources/ggcore-items.xml",
                 search = "(type|attribute).*",
               },
             }

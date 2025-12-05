@@ -15,8 +15,8 @@ return {
         nerd_font_variant = "mono",
       },
 
-      sources = {
-        cmdline = {},
+      cmdline = {
+        sources = {},
         providers = {
           path = {
             opts = {
